@@ -1,0 +1,28 @@
+import { prisma } from "@/lib/prisma"
+import { getKindeServerSession } from "@kinde-oss/kinde-auth-nextjs/server"
+import { NextRequest, NextResponse } from "next/server"
+
+export async function GET(request: NextRequest) {
+  const { getUser } = getKindeServerSession()
+  const user = await getUser()
+
+  if (!user || user === null || !user.id) {
+    throw new Error("Something went wrong, i am sorry....")
+  }
+
+  let dbUser = await prisma.user.findUnique({
+    where: { id: user.id }
+  })
+
+  if (!dbUser) {
+    dbUser = await prisma.user.create({
+      data: {
+        email: user.email ?? "", firstName: user.given_name ?? "",
+        lastName: user.family_name ?? "",
+        id: user.id,
+        profileImage: user.picture ?? `https://avatar.vercel.sh/${user.given_name}`
+      }
+    })
+  }
+  return NextResponse.redirect(process.env.HOME_PAGE!)
+}
