@@ -24,9 +24,11 @@ model Home {
   description      String?
   guests           String?
   bedrooms         String?
+  bathrooms        String?
   country          String?
   photo            String?
   price            String?
+  categoryName     String?
   addedCategory    Boolean  @default(false)
   addedDescription Boolean  @default(false)
   addedLocation    Boolean  @default(false)

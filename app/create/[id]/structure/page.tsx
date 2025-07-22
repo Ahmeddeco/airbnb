@@ -1,9 +1,11 @@
+import CreationBottomBar from "@/components/shared/CreationBottomBar"
 import SelectedCategory from "@/components/shared/SelectedCategory"
-import { Button } from "@/components/ui/button"
+import { Input } from "@/components/ui/input"
+import { createCategory } from "@/function/create"
 import Form from "next/form"
-import Link from "next/link"
 
-export default function StructurePage() {
+export default async function StructurePage({ params }: { params: Promise<{ id: string }> }) {
+	const id = (await params).id
 	return (
 		<>
 			<div className="w-3/5 mx-auto">
@@ -11,19 +13,14 @@ export default function StructurePage() {
 					Which of these best describe your Home!
 				</h2>
 			</div>
-			<Form action={""}>
+			<Form action={createCategory}>
+				<Input
+					type="hidden"
+					name="homeId"
+					value={id}
+				/>
 				<SelectedCategory />
-				<div className="fixed w-full bottom-0 z-10 bg-white border-t h-24">
-					<div className="flex items-center justify-between mx-auto px-5 lg:px-10 h-full ">
-						<Button
-							asChild
-							variant={"secondary"}
-							size={"lg"}>
-							<Link href={"/"}>Cancel</Link>
-						</Button>
-						<Button size={"lg"}>save</Button>
-					</div>
-				</div>
+				<CreationBottomBar />
 			</Form>
 		</>
 	)

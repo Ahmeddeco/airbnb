@@ -2076,9 +2076,11 @@ export namespace Prisma {
     description: string | null
     guests: string | null
     bedrooms: string | null
+    bathrooms: string | null
     country: string | null
     photo: string | null
     price: string | null
+    categoryName: string | null
     addedCategory: boolean | null
     addedDescription: boolean | null
     addedLocation: boolean | null
@@ -2092,9 +2094,11 @@ export namespace Prisma {
     description: string | null
     guests: string | null
     bedrooms: string | null
+    bathrooms: string | null
     country: string | null
     photo: string | null
     price: string | null
+    categoryName: string | null
     addedCategory: boolean | null
     addedDescription: boolean | null
     addedLocation: boolean | null
@@ -2108,9 +2112,11 @@ export namespace Prisma {
     description: number
     guests: number
     bedrooms: number
+    bathrooms: number
     country: number
     photo: number
     price: number
+    categoryName: number
     addedCategory: number
     addedDescription: number
     addedLocation: number
@@ -2126,9 +2132,11 @@ export namespace Prisma {
     description?: true
     guests?: true
     bedrooms?: true
+    bathrooms?: true
     country?: true
     photo?: true
     price?: true
+    categoryName?: true
     addedCategory?: true
     addedDescription?: true
     addedLocation?: true
@@ -2142,9 +2150,11 @@ export namespace Prisma {
     description?: true
     guests?: true
     bedrooms?: true
+    bathrooms?: true
     country?: true
     photo?: true
     price?: true
+    categoryName?: true
     addedCategory?: true
     addedDescription?: true
     addedLocation?: true
@@ -2158,9 +2168,11 @@ export namespace Prisma {
     description?: true
     guests?: true
     bedrooms?: true
+    bathrooms?: true
     country?: true
     photo?: true
     price?: true
+    categoryName?: true
     addedCategory?: true
     addedDescription?: true
     addedLocation?: true
@@ -2247,9 +2259,11 @@ export namespace Prisma {
     description: string | null
     guests: string | null
     bedrooms: string | null
+    bathrooms: string | null
     country: string | null
     photo: string | null
     price: string | null
+    categoryName: string | null
     addedCategory: boolean
     addedDescription: boolean
     addedLocation: boolean
@@ -2280,9 +2294,11 @@ export namespace Prisma {
     description?: boolean
     guests?: boolean
     bedrooms?: boolean
+    bathrooms?: boolean
     country?: boolean
     photo?: boolean
     price?: boolean
+    categoryName?: boolean
     addedCategory?: boolean
     addedDescription?: boolean
     addedLocation?: boolean
@@ -2297,9 +2313,11 @@ export namespace Prisma {
     description?: boolean
     guests?: boolean
     bedrooms?: boolean
+    bathrooms?: boolean
     country?: boolean
     photo?: boolean
     price?: boolean
+    categoryName?: boolean
     addedCategory?: boolean
     addedDescription?: boolean
     addedLocation?: boolean
@@ -2314,9 +2332,11 @@ export namespace Prisma {
     description?: boolean
     guests?: boolean
     bedrooms?: boolean
+    bathrooms?: boolean
     country?: boolean
     photo?: boolean
     price?: boolean
+    categoryName?: boolean
     addedCategory?: boolean
     addedDescription?: boolean
     addedLocation?: boolean
@@ -2331,9 +2351,11 @@ export namespace Prisma {
     description?: boolean
     guests?: boolean
     bedrooms?: boolean
+    bathrooms?: boolean
     country?: boolean
     photo?: boolean
     price?: boolean
+    categoryName?: boolean
     addedCategory?: boolean
     addedDescription?: boolean
     addedLocation?: boolean
@@ -2341,7 +2363,7 @@ export namespace Prisma {
     userId?: boolean
   }
 
-  export type HomeOmit<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = $Extensions.GetOmit<"id" | "title" | "description" | "guests" | "bedrooms" | "country" | "photo" | "price" | "addedCategory" | "addedDescription" | "addedLocation" | "createdAt" | "userId", ExtArgs["result"]["home"]>
+  export type HomeOmit<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = $Extensions.GetOmit<"id" | "title" | "description" | "guests" | "bedrooms" | "bathrooms" | "country" | "photo" | "price" | "categoryName" | "addedCategory" | "addedDescription" | "addedLocation" | "createdAt" | "userId", ExtArgs["result"]["home"]>
   export type HomeInclude<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
     User?: boolean | Home$UserArgs<ExtArgs>
   }
@@ -2363,9 +2385,11 @@ export namespace Prisma {
       description: string | null
       guests: string | null
       bedrooms: string | null
+      bathrooms: string | null
       country: string | null
       photo: string | null
       price: string | null
+      categoryName: string | null
       addedCategory: boolean
       addedDescription: boolean
       addedLocation: boolean
@@ -2800,9 +2824,11 @@ export namespace Prisma {
     readonly description: FieldRef<"Home", 'String'>
     readonly guests: FieldRef<"Home", 'String'>
     readonly bedrooms: FieldRef<"Home", 'String'>
+    readonly bathrooms: FieldRef<"Home", 'String'>
     readonly country: FieldRef<"Home", 'String'>
     readonly photo: FieldRef<"Home", 'String'>
     readonly price: FieldRef<"Home", 'String'>
+    readonly categoryName: FieldRef<"Home", 'String'>
     readonly addedCategory: FieldRef<"Home", 'Boolean'>
     readonly addedDescription: FieldRef<"Home", 'Boolean'>
     readonly addedLocation: FieldRef<"Home", 'Boolean'>
@@ -3272,9 +3298,11 @@ export namespace Prisma {
     description: 'description',
     guests: 'guests',
     bedrooms: 'bedrooms',
+    bathrooms: 'bathrooms',
     country: 'country',
     photo: 'photo',
     price: 'price',
+    categoryName: 'categoryName',
     addedCategory: 'addedCategory',
     addedDescription: 'addedDescription',
     addedLocation: 'addedLocation',
@@ -3430,9 +3458,11 @@ export namespace Prisma {
     description?: StringNullableFilter<"Home"> | string | null
     guests?: StringNullableFilter<"Home"> | string | null
     bedrooms?: StringNullableFilter<"Home"> | string | null
+    bathrooms?: StringNullableFilter<"Home"> | string | null
     country?: StringNullableFilter<"Home"> | string | null
     photo?: StringNullableFilter<"Home"> | string | null
     price?: StringNullableFilter<"Home"> | string | null
+    categoryName?: StringNullableFilter<"Home"> | string | null
     addedCategory?: BoolFilter<"Home"> | boolean
     addedDescription?: BoolFilter<"Home"> | boolean
     addedLocation?: BoolFilter<"Home"> | boolean
@@ -3447,9 +3477,11 @@ export namespace Prisma {
     description?: SortOrderInput | SortOrder
     guests?: SortOrderInput | SortOrder
     bedrooms?: SortOrderInput | SortOrder
+    bathrooms?: SortOrderInput | SortOrder
     country?: SortOrderInput | SortOrder
     photo?: SortOrderInput | SortOrder
     price?: SortOrderInput | SortOrder
+    categoryName?: SortOrderInput | SortOrder
     addedCategory?: SortOrder
     addedDescription?: SortOrder
     addedLocation?: SortOrder
@@ -3467,9 +3499,11 @@ export namespace Prisma {
     description?: StringNullableFilter<"Home"> | string | null
     guests?: StringNullableFilter<"Home"> | string | null
     bedrooms?: StringNullableFilter<"Home"> | string | null
+    bathrooms?: StringNullableFilter<"Home"> | string | null
     country?: StringNullableFilter<"Home"> | string | null
     photo?: StringNullableFilter<"Home"> | string | null
     price?: StringNullableFilter<"Home"> | string | null
+    categoryName?: StringNullableFilter<"Home"> | string | null
     addedCategory?: BoolFilter<"Home"> | boolean
     addedDescription?: BoolFilter<"Home"> | boolean
     addedLocation?: BoolFilter<"Home"> | boolean
@@ -3484,9 +3518,11 @@ export namespace Prisma {
     description?: SortOrderInput | SortOrder
     guests?: SortOrderInput | SortOrder
     bedrooms?: SortOrderInput | SortOrder
+    bathrooms?: SortOrderInput | SortOrder
     country?: SortOrderInput | SortOrder
     photo?: SortOrderInput | SortOrder
     price?: SortOrderInput | SortOrder
+    categoryName?: SortOrderInput | SortOrder
     addedCategory?: SortOrder
     addedDescription?: SortOrder
     addedLocation?: SortOrder
@@ -3506,9 +3542,11 @@ export namespace Prisma {
     description?: StringNullableWithAggregatesFilter<"Home"> | string | null
     guests?: StringNullableWithAggregatesFilter<"Home"> | string | null
     bedrooms?: StringNullableWithAggregatesFilter<"Home"> | string | null
+    bathrooms?: StringNullableWithAggregatesFilter<"Home"> | string | null
     country?: StringNullableWithAggregatesFilter<"Home"> | string | null
     photo?: StringNullableWithAggregatesFilter<"Home"> | string | null
     price?: StringNullableWithAggregatesFilter<"Home"> | string | null
+    categoryName?: StringNullableWithAggregatesFilter<"Home"> | string | null
     addedCategory?: BoolWithAggregatesFilter<"Home"> | boolean
     addedDescription?: BoolWithAggregatesFilter<"Home"> | boolean
     addedLocation?: BoolWithAggregatesFilter<"Home"> | boolean
@@ -3582,9 +3620,11 @@ export namespace Prisma {
     description?: string | null
     guests?: string | null
     bedrooms?: string | null
+    bathrooms?: string | null
     country?: string | null
     photo?: string | null
     price?: string | null
+    categoryName?: string | null
     addedCategory?: boolean
     addedDescription?: boolean
     addedLocation?: boolean
@@ -3598,9 +3638,11 @@ export namespace Prisma {
     description?: string | null
     guests?: string | null
     bedrooms?: string | null
+    bathrooms?: string | null
     country?: string | null
     photo?: string | null
     price?: string | null
+    categoryName?: string | null
     addedCategory?: boolean
     addedDescription?: boolean
     addedLocation?: boolean
@@ -3614,9 +3656,11 @@ export namespace Prisma {
     description?: NullableStringFieldUpdateOperationsInput | string | null
     guests?: NullableStringFieldUpdateOperationsInput | string | null
     bedrooms?: NullableStringFieldUpdateOperationsInput | string | null
+    bathrooms?: NullableStringFieldUpdateOperationsInput | string | null
     country?: NullableStringFieldUpdateOperationsInput | string | null
     photo?: NullableStringFieldUpdateOperationsInput | string | null
     price?: NullableStringFieldUpdateOperationsInput | string | null
+    categoryName?: NullableStringFieldUpdateOperationsInput | string | null
     addedCategory?: BoolFieldUpdateOperationsInput | boolean
     addedDescription?: BoolFieldUpdateOperationsInput | boolean
     addedLocation?: BoolFieldUpdateOperationsInput | boolean
@@ -3630,9 +3674,11 @@ export namespace Prisma {
     description?: NullableStringFieldUpdateOperationsInput | string | null
     guests?: NullableStringFieldUpdateOperationsInput | string | null
     bedrooms?: NullableStringFieldUpdateOperationsInput | string | null
+    bathrooms?: NullableStringFieldUpdateOperationsInput | string | null
     country?: NullableStringFieldUpdateOperationsInput | string | null
     photo?: NullableStringFieldUpdateOperationsInput | string | null
     price?: NullableStringFieldUpdateOperationsInput | string | null
+    categoryName?: NullableStringFieldUpdateOperationsInput | string | null
     addedCategory?: BoolFieldUpdateOperationsInput | boolean
     addedDescription?: BoolFieldUpdateOperationsInput | boolean
     addedLocation?: BoolFieldUpdateOperationsInput | boolean
@@ -3646,9 +3692,11 @@ export namespace Prisma {
     description?: string | null
     guests?: string | null
     bedrooms?: string | null
+    bathrooms?: string | null
     country?: string | null
     photo?: string | null
     price?: string | null
+    categoryName?: string | null
     addedCategory?: boolean
     addedDescription?: boolean
     addedLocation?: boolean
@@ -3662,9 +3710,11 @@ export namespace Prisma {
     description?: NullableStringFieldUpdateOperationsInput | string | null
     guests?: NullableStringFieldUpdateOperationsInput | string | null
     bedrooms?: NullableStringFieldUpdateOperationsInput | string | null
+    bathrooms?: NullableStringFieldUpdateOperationsInput | string | null
     country?: NullableStringFieldUpdateOperationsInput | string | null
     photo?: NullableStringFieldUpdateOperationsInput | string | null
     price?: NullableStringFieldUpdateOperationsInput | string | null
+    categoryName?: NullableStringFieldUpdateOperationsInput | string | null
     addedCategory?: BoolFieldUpdateOperationsInput | boolean
     addedDescription?: BoolFieldUpdateOperationsInput | boolean
     addedLocation?: BoolFieldUpdateOperationsInput | boolean
@@ -3677,9 +3727,11 @@ export namespace Prisma {
     description?: NullableStringFieldUpdateOperationsInput | string | null
     guests?: NullableStringFieldUpdateOperationsInput | string | null
     bedrooms?: NullableStringFieldUpdateOperationsInput | string | null
+    bathrooms?: NullableStringFieldUpdateOperationsInput | string | null
     country?: NullableStringFieldUpdateOperationsInput | string | null
     photo?: NullableStringFieldUpdateOperationsInput | string | null
     price?: NullableStringFieldUpdateOperationsInput | string | null
+    categoryName?: NullableStringFieldUpdateOperationsInput | string | null
     addedCategory?: BoolFieldUpdateOperationsInput | boolean
     addedDescription?: BoolFieldUpdateOperationsInput | boolean
     addedLocation?: BoolFieldUpdateOperationsInput | boolean
@@ -3819,9 +3871,11 @@ export namespace Prisma {
     description?: SortOrder
     guests?: SortOrder
     bedrooms?: SortOrder
+    bathrooms?: SortOrder
     country?: SortOrder
     photo?: SortOrder
     price?: SortOrder
+    categoryName?: SortOrder
     addedCategory?: SortOrder
     addedDescription?: SortOrder
     addedLocation?: SortOrder
@@ -3835,9 +3889,11 @@ export namespace Prisma {
     description?: SortOrder
     guests?: SortOrder
     bedrooms?: SortOrder
+    bathrooms?: SortOrder
     country?: SortOrder
     photo?: SortOrder
     price?: SortOrder
+    categoryName?: SortOrder
     addedCategory?: SortOrder
     addedDescription?: SortOrder
     addedLocation?: SortOrder
@@ -3851,9 +3907,11 @@ export namespace Prisma {
     description?: SortOrder
     guests?: SortOrder
     bedrooms?: SortOrder
+    bathrooms?: SortOrder
     country?: SortOrder
     photo?: SortOrder
     price?: SortOrder
+    categoryName?: SortOrder
     addedCategory?: SortOrder
     addedDescription?: SortOrder
     addedLocation?: SortOrder
@@ -4085,9 +4143,11 @@ export namespace Prisma {
     description?: string | null
     guests?: string | null
     bedrooms?: string | null
+    bathrooms?: string | null
     country?: string | null
     photo?: string | null
     price?: string | null
+    categoryName?: string | null
     addedCategory?: boolean
     addedDescription?: boolean
     addedLocation?: boolean
@@ -4100,9 +4160,11 @@ export namespace Prisma {
     description?: string | null
     guests?: string | null
     bedrooms?: string | null
+    bathrooms?: string | null
     country?: string | null
     photo?: string | null
     price?: string | null
+    categoryName?: string | null
     addedCategory?: boolean
     addedDescription?: boolean
     addedLocation?: boolean
@@ -4144,9 +4206,11 @@ export namespace Prisma {
     description?: StringNullableFilter<"Home"> | string | null
     guests?: StringNullableFilter<"Home"> | string | null
     bedrooms?: StringNullableFilter<"Home"> | string | null
+    bathrooms?: StringNullableFilter<"Home"> | string | null
     country?: StringNullableFilter<"Home"> | string | null
     photo?: StringNullableFilter<"Home"> | string | null
     price?: StringNullableFilter<"Home"> | string | null
+    categoryName?: StringNullableFilter<"Home"> | string | null
     addedCategory?: BoolFilter<"Home"> | boolean
     addedDescription?: BoolFilter<"Home"> | boolean
     addedLocation?: BoolFilter<"Home"> | boolean
@@ -4208,9 +4272,11 @@ export namespace Prisma {
     description?: string | null
     guests?: string | null
     bedrooms?: string | null
+    bathrooms?: string | null
     country?: string | null
     photo?: string | null
     price?: string | null
+    categoryName?: string | null
     addedCategory?: boolean
     addedDescription?: boolean
     addedLocation?: boolean
@@ -4223,9 +4289,11 @@ export namespace Prisma {
     description?: NullableStringFieldUpdateOperationsInput | string | null
     guests?: NullableStringFieldUpdateOperationsInput | string | null
     bedrooms?: NullableStringFieldUpdateOperationsInput | string | null
+    bathrooms?: NullableStringFieldUpdateOperationsInput | string | null
     country?: NullableStringFieldUpdateOperationsInput | string | null
     photo?: NullableStringFieldUpdateOperationsInput | string | null
     price?: NullableStringFieldUpdateOperationsInput | string | null
+    categoryName?: NullableStringFieldUpdateOperationsInput | string | null
     addedCategory?: BoolFieldUpdateOperationsInput | boolean
     addedDescription?: BoolFieldUpdateOperationsInput | boolean
     addedLocation?: BoolFieldUpdateOperationsInput | boolean
@@ -4238,9 +4306,11 @@ export namespace Prisma {
     description?: NullableStringFieldUpdateOperationsInput | string | null
     guests?: NullableStringFieldUpdateOperationsInput | string | null
     bedrooms?: NullableStringFieldUpdateOperationsInput | string | null
+    bathrooms?: NullableStringFieldUpdateOperationsInput | string | null
     country?: NullableStringFieldUpdateOperationsInput | string | null
     photo?: NullableStringFieldUpdateOperationsInput | string | null
     price?: NullableStringFieldUpdateOperationsInput | string | null
+    categoryName?: NullableStringFieldUpdateOperationsInput | string | null
     addedCategory?: BoolFieldUpdateOperationsInput | boolean
     addedDescription?: BoolFieldUpdateOperationsInput | boolean
     addedLocation?: BoolFieldUpdateOperationsInput | boolean
@@ -4253,9 +4323,11 @@ export namespace Prisma {
     description?: NullableStringFieldUpdateOperationsInput | string | null
     guests?: NullableStringFieldUpdateOperationsInput | string | null
     bedrooms?: NullableStringFieldUpdateOperationsInput | string | null
+    bathrooms?: NullableStringFieldUpdateOperationsInput | string | null
     country?: NullableStringFieldUpdateOperationsInput | string | null
     photo?: NullableStringFieldUpdateOperationsInput | string | null
     price?: NullableStringFieldUpdateOperationsInput | string | null
+    categoryName?: NullableStringFieldUpdateOperationsInput | string | null
     addedCategory?: BoolFieldUpdateOperationsInput | boolean
     addedDescription?: BoolFieldUpdateOperationsInput | boolean
     addedLocation?: BoolFieldUpdateOperationsInput | boolean
