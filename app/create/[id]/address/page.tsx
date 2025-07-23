@@ -13,7 +13,7 @@ import {
 	SelectValue,
 } from "@/components/ui/select"
 import { Skeleton } from "@/components/ui/skeleton"
-import { createLocation } from "@/function/create"
+import { createLocation } from "@/function/actions"
 import { useCountries } from "@/lib/getCountries"
 import dynamic from "next/dynamic"
 import Form from "next/form"

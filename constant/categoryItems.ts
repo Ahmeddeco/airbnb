@@ -1,23 +1,12 @@
-import amazingView from "@/public/icons/category/amazingView.webp"
-import beach from '@/public/icons/category/beach.webp'
-import beachfront from '@/public/icons/category/beachfront.webp'
-import countryside from '@/public/icons/category/countryside.webp'
-import design from '@/public/icons/category/design.webp'
-import earthhome from '@/public/icons/category/earthhome.webp'
-import historic from '@/public/icons/category/historic.webp'
-import luxe from '@/public/icons/category/luxe.webp'
-import omg from '@/public/icons/category/omg.webp'
-import pool from '@/public/icons/category/pool.webp'
-import surfing from '@/public/icons/category/surfing.webp'
-import tiny from '@/public/icons/category/tiny.webp'
-import trending from '@/public/icons/category/trending.webp'
+
+import { Brush, Building2, Castle, Croissant, Earth, Flame, LucideIcon, ThumbsUp, Tractor, Umbrella, View, Waves, WavesLadder } from "lucide-react"
 
 interface iAppProps {
   name: string
   title: string
-  imageUrl: any
   description: string
   id: number
+  icon: LucideIcon
 }
 
 export const categoryItems: iAppProps[] = [
@@ -26,90 +15,90 @@ export const categoryItems: iAppProps[] = [
     name: "beach",
     description: "This Property is close to the Beach.",
     title: "Beach",
-    imageUrl:beach
+    icon: Umbrella
   },
   {
     id: 1,
     name: "trending",
     description: "This is a Property which is trending.",
     title: "Trending",
-    imageUrl: trending
+    icon: Flame
   },
   {
     id: 2,
     name: "beachfront",
     description: "This is a Property is close to the beachfront",
     title: "Beachfront",
-    imageUrl: beachfront
+    icon: Waves
   },
   {
     id: 3,
     name: "earthhome",
     description: "This Property is considerd a Earth Home",
     title: "Earth Home",
-    imageUrl: earthhome
+    icon: Earth
   },
   {
     id: 4,
     name: "luxe",
     description: "This Property is considerd Luxorious",
     title: "Luxe",
-    imageUrl: luxe
+    icon: Croissant
   },
   {
     id: 5,
     name: "amazingView",
     description: "This property has an amazing View",
     title: "Amazing View",
-    imageUrl: amazingView
+    icon: View
   },
   {
     id: 6,
     name: "design",
     description: "This property puts a big focus on design ",
     title: "Design",
-    imageUrl: design
+    icon: Brush
   },
   {
     id: 7,
     name: "pool",
     description: "This property has an amazing Pool",
     title: "Pool",
-    imageUrl: pool
+    icon: WavesLadder
   },
   {
     id: 8,
     name: "tiny",
     description: "This property is considered a tiny home",
     title: "Tiny Home",
-    imageUrl: tiny
+    icon: Building2
   },
   {
     id: 9,
     name: "historic",
     description: "This Property is considered historic",
     title: "Historic Home",
-    imageUrl: historic
+    icon: Castle
   },
   {
     id: 10,
     name: "countryside",
     description: "This Property is located on the countryside",
     title: "Countryside",
-    imageUrl: countryside
+    icon: Tractor
   },
   {
     id: 11,
     name: "omg",
     description: "This Property has a wow factor",
     title: "WOW!",
-    imageUrl: omg
+    icon: ThumbsUp
   },
   {
     id: 12,
     name: "surfing",
     description: "This Property is located near to a surfing spot",
     title: "Surfing",
-    imageUrl: surfing
+    icon: Waves
   },
 ]

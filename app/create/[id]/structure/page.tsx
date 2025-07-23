@@ -1,7 +1,7 @@
 import CreationBottomBar from "@/components/shared/CreationBottomBar"
 import SelectedCategory from "@/components/shared/SelectedCategory"
 import { Input } from "@/components/ui/input"
-import { createCategory } from "@/function/create"
+import { createCategory } from "@/function/actions"
 import Form from "next/form"
 
 export default async function StructurePage({ params }: { params: Promise<{ id: string }> }) {

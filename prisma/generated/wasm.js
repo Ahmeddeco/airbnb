@@ -146,6 +146,13 @@ exports.Prisma.HomeScalarFieldEnum = {
   userId: 'userId'
 };
 
+exports.Prisma.FavoriteScalarFieldEnum = {
+  id: 'id',
+  userId: 'userId',
+  homeId: 'homeId',
+  createdAt: 'createdAt'
+};
+
 exports.Prisma.SortOrder = {
   asc: 'asc',
   desc: 'desc'
@@ -164,7 +171,8 @@ exports.Prisma.NullsOrder = {
 
 exports.Prisma.ModelName = {
   User: 'User',
-  Home: 'Home'
+  Home: 'Home',
+  Favorite: 'Favorite'
 };
 
 /**

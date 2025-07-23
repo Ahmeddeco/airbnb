@@ -10,16 +10,17 @@ datasource db {
 }
 
 model User {
-  id           String  @id @unique
+  id           String     @id @unique
   email        String
   firstName    String
   lastName     String
   profileImage String?
   home         Home[]
+  favorite     Favorite[]
 }
 
 model Home {
-  id               String   @id @default(uuid())
+  id               String     @id @default(uuid())
   title            String?
   description      String?
   guests           String?
@@ -29,10 +30,20 @@ model Home {
   photo            String?
   price            String?
   categoryName     String?
-  addedCategory    Boolean  @default(false)
-  addedDescription Boolean  @default(false)
-  addedLocation    Boolean  @default(false)
-  createdAt        DateTime @default(now())
-  User             User?    @relation(fields: [userId], references: [id])
+  addedCategory    Boolean    @default(false)
+  addedDescription Boolean    @default(false)
+  addedLocation    Boolean    @default(false)
+  createdAt        DateTime   @default(now())
+  User             User?      @relation(fields: [userId], references: [id])
   userId           String?
+  favorite         Favorite[]
+}
+
+model Favorite {
+  id        String   @id @default(uuid())
+  user      User?    @relation(fields: [userId], references: [id])
+  userId    String?
+  home      Home?    @relation(fields: [homeId], references: [id])
+  homeId    String?
+  createdAt DateTime @default(now())
 }

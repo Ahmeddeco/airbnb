@@ -4,7 +4,7 @@ import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/com
 import { Input } from "@/components/ui/input"
 import { Label } from "@/components/ui/label"
 import { Textarea } from "@/components/ui/textarea"
-import { createDescription } from "@/function/create"
+import { createDescription } from "@/function/actions"
 import Form from "next/form"
 
 export default async function DescriptionPage({ params }: { params: Promise<{ id: string }> }) {

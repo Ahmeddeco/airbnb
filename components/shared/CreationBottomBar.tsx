@@ -1,6 +1,6 @@
 import Link from "next/link"
 import { Button } from "../ui/button"
-import CreationSubmit from "./CreationSubmit"
+import {CreationSubmit} from "./SubmitButtons"
 
 export default function CreationBottomBar() {
 	return (

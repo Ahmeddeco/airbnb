@@ -118,8 +118,12 @@
 		@apply bg-background text-foreground;
 	}
 	h2{
-		@apply text-3xl font-semibold tracking-tight transition-colors
+		@apply text-3xl font-semibold tracking-tight transition-colors capitalize
 	}
+
+h3{
+	@apply text-base font-medium
+}
 
 	.no-scrollbar::-webkit-scrollbar {
 		display: none;

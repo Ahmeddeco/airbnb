@@ -11,7 +11,7 @@ import { getKindeServerSession } from "@kinde-oss/kinde-auth-nextjs/server"
 import Image from "next/image"
 import Link from "next/link"
 import Form from "next/form"
-import { createAirbnbHome } from "@/function/create"
+import { createAirbnbHome } from "@/function/actions"
 import { Input } from "@/components/ui/input"
 import { Button } from "../ui/button"
 
@@ -46,7 +46,7 @@ export default async function UserNav() {
 						/>
 						{user ? (
 							<Button type="submit">
-								<PlusCircle className="text-slate-100"/>
+								<PlusCircle className="text-slate-100" />
 								add your home
 							</Button>
 						) : (

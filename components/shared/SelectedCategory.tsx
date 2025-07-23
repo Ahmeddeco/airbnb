@@ -1,7 +1,7 @@
 "use client"
 
 import { categoryItems } from "@/constant/categoryItems"
-import { Card, CardContent, CardHeader, CardTitle } from "../ui/card"
+import { Card, CardHeader } from "../ui/card"
 import Image from "next/image"
 import { useState } from "react"
 import { Input } from "../ui/input"
@@ -35,7 +35,6 @@ export default function SelectedCategory() {
 							/>
 							<h3 className="font-medium">{title}</h3>
 						</CardHeader>
-						<CardContent></CardContent>
 					</Card>
 				</div>
 			))}
