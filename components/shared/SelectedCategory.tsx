@@ -3,8 +3,9 @@
 import { categoryItems } from "@/constant/categoryItems"
 import { Card, CardHeader } from "../ui/card"
 import Image from "next/image"
-import { useState } from "react"
+import React, { useState } from "react"
 import { Input } from "../ui/input"
+import { icon } from "leaflet"
 
 export default function SelectedCategory() {
 	const [selectedCategory, setSelectedCategory] = useState<string | undefined>(undefined)
@@ -16,7 +17,7 @@ export default function SelectedCategory() {
 				name="categoryName"
 				value={selectedCategory ?? ""}
 			/>
-			{categoryItems.map(({ id, imageUrl, name, title }) => (
+			{categoryItems.map(({ id, icon, name, title }) => (
 				<div
 					className="cursor-pointer"
 					key={id}
@@ -25,14 +26,8 @@ export default function SelectedCategory() {
 						className={selectedCategory === name ? "border-primary" : ""}
 						onClick={() => setSelectedCategory(name)}
 					>
-						<CardHeader>
-							<Image
-								src={imageUrl}
-								alt={name}
-								height={32}
-								width={32}
-								className="size-8"
-							/>
+						<CardHeader className="flex flex-col items-center gap-2">
+							{React.createElement(icon!)}
 							<h3 className="font-medium">{title}</h3>
 						</CardHeader>
 					</Card>

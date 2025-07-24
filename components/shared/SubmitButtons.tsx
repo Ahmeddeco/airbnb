@@ -4,18 +4,22 @@ import { useFormStatus } from "react-dom"
 import { Button } from "../ui/button"
 import { Heart, Loader2 } from "lucide-react"
 
+type ButtonProps = {
+	size?: "default" | "sm" | "lg" | "full" | "icon" | null | undefined
+}
+
 /* ----------------------------- CreationSubmit ----------------------------- */
-export function CreationSubmit() {
+export function CreationSubmit({ size = "default" }: ButtonProps) {
 	const { pending } = useFormStatus()
 
 	return (
 		<>
 			{pending ? (
-				<Button disabled>
+				<Button disabled size={size}>
 					<Loader2 className="animate-spin" /> please wait
 				</Button>
 			) : (
-				<Button type="submit">Next</Button>
+				<Button type="submit" size={size}>Next</Button>
 			)}
 		</>
 	)
