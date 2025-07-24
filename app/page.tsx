@@ -3,10 +3,13 @@ import ListingCard from "@/components/shared/ListingCard"
 import NoItems from "@/components/shared/NoItems"
 import { prisma } from "@/lib/prisma"
 import { getKindeServerSession } from "@kinde-oss/kinde-auth-nextjs/server"
+import { unstable_noStore as noStore } from "next/cache"
 
 /* --------------------------------- getData -------------------------------- */
 const getData = async (searchParam: string, userId: string | undefined) => {
 	try {
+		noStore()
+
 		const data = await prisma.home.findMany({
 			where: {
 				addedCategory: true,

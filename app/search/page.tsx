@@ -1,6 +1,7 @@
 import ListingCard from "@/components/shared/ListingCard"
 import NoItems from "@/components/shared/NoItems"
 import { prisma } from "@/lib/prisma"
+import { unstable_noStore as noStore } from "next/cache"
 
 type searchParamsType = {
 	locationValue: string
@@ -11,6 +12,8 @@ type searchParamsType = {
 
 const getData = async (searchParams: searchParamsType) => {
 	try {
+		noStore()
+
 		const data = await prisma.home.findMany({
 			where: {
 				addedCategory: true,
