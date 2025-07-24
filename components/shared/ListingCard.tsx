@@ -1,7 +1,7 @@
 import { useCountries } from "@/lib/getCountries"
 import Image from "next/image"
 import Link from "next/link"
-import { Card, CardContent } from "../ui/card"
+import { Card } from "../ui/card"
 import { AddToFavoriteButton } from "./SubmitButtons"
 import Form from "next/form"
 import { Input } from "../ui/input"
@@ -37,10 +37,10 @@ export default function ListingCard({
 		<Card className="flex flex-col p-0">
 			<div className="relative h-72 aspect-square">
 				<Image
-					src={`https://otuebdaiujiwlrcgepnk.supabase.co/storage/v1/object/public/images/${imagePath}`}
+					src={process.env.IMAGE_URL + imagePath}
 					alt={"house"}
 					fill
-					className="rounded-t-lg h-full object-cover "
+					className="rounded-t-xl h-full object-cover "
 				/>
 				{userId && (
 					<div className="z-10 absolute top-2 right-2">
@@ -64,7 +64,7 @@ export default function ListingCard({
 					</div>
 				)}
 			</div>
-			<Link href={`/`} className="px-4 pb-4">
+			<Link href={`/home/${homeId}`} className="px-4 pb-4">
 				<h3>
 					{country?.flag} {country?.label} / {country?.region}{" "}
 				</h3>

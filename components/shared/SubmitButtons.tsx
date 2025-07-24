@@ -11,13 +11,11 @@ export function CreationSubmit() {
 	return (
 		<>
 			{pending ? (
-				<Button disabled size={"lg"}>
+				<Button disabled>
 					<Loader2 className="animate-spin" /> please wait
 				</Button>
 			) : (
-				<Button type="submit" size={"lg"}>
-					Next
-				</Button>
+				<Button type="submit">Next</Button>
 			)}
 		</>
 	)
@@ -37,6 +35,22 @@ export const AddToFavoriteButton = ({ fill }: { fill?: string }) => {
 				<Button variant={"outline"} size={"icon"} className="bg-primary-foreground" type="submit">
 					<Heart fill={fill ? fill : "none"} stroke="#f43f5e" strokeWidth={2} />
 				</Button>
+			)}
+		</>
+	)
+}
+
+export const ReservationSubmitButton = () => {
+	const { pending } = useFormStatus()
+
+	return (
+		<>
+			{pending ? (
+				<Button disabled>
+					<Loader2 className="animate-spin" /> please wait
+				</Button>
+			) : (
+				<Button type="submit">Make reservation</Button>
 			)}
 		</>
 	)

@@ -125,7 +125,8 @@ exports.Prisma.UserScalarFieldEnum = {
   email: 'email',
   firstName: 'firstName',
   lastName: 'lastName',
-  profileImage: 'profileImage'
+  profileImage: 'profileImage',
+  createdAt: 'createdAt'
 };
 
 exports.Prisma.HomeScalarFieldEnum = {
@@ -153,6 +154,15 @@ exports.Prisma.FavoriteScalarFieldEnum = {
   createdAt: 'createdAt'
 };
 
+exports.Prisma.ReservationScalarFieldEnum = {
+  id: 'id',
+  startDate: 'startDate',
+  endDate: 'endDate',
+  createdAt: 'createdAt',
+  userId: 'userId',
+  homeId: 'homeId'
+};
+
 exports.Prisma.SortOrder = {
   asc: 'asc',
   desc: 'desc'
@@ -172,7 +182,8 @@ exports.Prisma.NullsOrder = {
 exports.Prisma.ModelName = {
   User: 'User',
   Home: 'Home',
-  Favorite: 'Favorite'
+  Favorite: 'Favorite',
+  Reservation: 'Reservation'
 };
 
 /**
